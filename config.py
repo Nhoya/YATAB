@@ -9,8 +9,9 @@ from modules.onjoin.nobots import nobots
 
 TOKEN=''
 WHITELIST = []
-#modules that don't need arguments
 
+#commands
 commands = [s0ng,pong,op,mode,ban,unban,help]
 
+#actions on user join
 onjoin = [nobots,no_ascii_name]
