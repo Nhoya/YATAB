@@ -1,3 +1,5 @@
+[![GitHub issues](https://img.shields.io/github/issues/Nhoya/YATAB.svg)](https://github.com/Nhoya/YATAB/issues)
+
 # YATAB
 Yet another telegram administration bot
 
