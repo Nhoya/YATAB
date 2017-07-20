@@ -38,19 +38,19 @@ These modules contains  only the single commands you can use with `/name-of-the-
 
 Current command modules:
 
-[x] `/ban` -  ban the user that wrote the quoted message
-[x] `/unban` - unban the user that wrote the quoted message
-[x] `/mode +o` - change the mode of the user quoted in the message to operator
-[x] `/mode -o` - change the mode of the user quoted in the message from operator to user
-[x] `/op` - if the user is an operator giving this command can became an administrator of the group
-[x] `/s0ng` - send a random song from [this YouTube Channel](https://www.youtube.com/user/bl4ckh4ts0ngs/)
-[x] `/ping` - just for fun, the bot will answer `pong`
-[x] `/help` - shows commands and controls info
-[ ] `/groupinfo` - show groups info
-[ ] `/info` - show info about the quoted user
+- [x] `/ban` -  ban the user that wrote the quoted message
+- [x] `/unban` - unban the user that wrote the quoted message
+- [x] `/mode +o` - change the mode of the user quoted in the message to operator
+- [x] `/mode -o` - change the mode of the user quoted in the message from operator to user
+- [x] `/op` - if the user is an operator giving this command can became an administrator of the group
+- [x] `/s0ng` - send a random song from [this YouTube Channel](https://www.youtube.com/user/bl4ckh4ts0ngs/)
+- [x] `/ping` - just for fun, the bot will answer `pong`
+- [x] `/help` - shows commands and controls info
+- [ ] `/groupinfo` - show groups info
+- [ ] `/info` - show info about the quoted user
 
 ### Onjoin modules
 These are all the actions the bot will make every time a new user join
-[x] `nobots` if a bot not in whitelist joins the group it will be banned
-[x] `not_ascii_name` kick users with non-ascii char in first name
+- [x] `nobots` if a bot not in whitelist joins the group it will be banned
+- [x] `not_ascii_name` kick users with non-ascii char in first name
 
