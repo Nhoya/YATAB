@@ -30,6 +30,7 @@ And finally you can run you personal istance of `YATAB`
 `./yatab`
 
 ## Modules
+YATAB offers a modular system to integrate commands and actions to the bot, if you want to create your own module check the [Wiki page](https://github.com/Nhoya/YATAB/wiki/Creating-a-new-Module)
 
 There are 2 different kinds of modules:
 
