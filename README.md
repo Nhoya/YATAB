@@ -51,6 +51,10 @@ Current command modules:
 
 ### Onjoin modules
 These are all the actions the bot will make every time a new user join
-- [x] `nobots` if a bot not in whitelist joins the group it will be banned
-- [x] `not_ascii_name` kick users with non-ascii char in first name
+- [x] `nobots` - if a bot not in whitelist joins the group it will be banned
+- [x] `not_ascii_name` - kick users with non-ascii char in first name
 
+### OnMessage modules
+These are all the actions the bot will do every time someone send a new message(it includes stickers, gifs, images, etc..)
+
+- [ ] `antiflood` - integrates an [algorithm](https://github.com/Nhoya/telegram_lamebuster/blob/master/lamebuster.py#L33) to stop flooders inside the group
