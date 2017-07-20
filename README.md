@@ -17,7 +17,7 @@ First you need to clone the repository
 
 `git clone https://github.com/Nhoya/YATAB`
 
-Now you have to [create a bot](https://core.telegram.org/bots#creating-a-new-bot) and paste the APIKEY inside the `config.py` file inside the `TOKEN` variable
+Now you have to [create a bot](https://core.telegram.org/bots#creating-a-new-bot) and paste the `APIKEY` inside the `TOKEN` variable inside `config.py` located in the same directory of `yatab.py`
 
 You have to create an `sqlite3` file called `buster.db` using this command
 
