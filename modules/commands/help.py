@@ -1,14 +1,16 @@
 import telegram
 import config
+from telegram import ParseMode
+import html
 
 def helpcb(bot,update):
-    msg = "===== *COMMANDS* =====\n"
+    msg = "===== <b>COMMANDS</b> =====\n"
     for command in config.commands:
-        msg = msg+"/"+command.name+" - "+command.desc+"\n"
-    msg = msg+" ===== *CONTROLS* =====\n"
+        msg += "/{} - {}\n".format(html.escape(command.name), html.escape(command.desc))
+    msg += " ===== <b>CONTROLS</b> =====\n"
     for cont in config.onjoin:
-        msg = msg+"`"+cont.name+"` - "+cont.desc+"\n"
-    update.message.reply_text(text=msg, parse_mode='MARKDOWN')
+        msg += "<code>{}</code> - <code>{}</code>\n".format(html.escape(cont.name), html.escape(cont.desc))
+    update.message.reply_text(text=msg, parse_mode=ParseMode.HTML)
     
 
 class help:
