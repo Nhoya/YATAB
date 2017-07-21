@@ -33,12 +33,13 @@ def AdminInDb(db,cur,userid,gid):
 
 
 def RegisterUser(db,cur,userid,username):
-    try:
-        query = "INSERT OR IGNORE INTO users(uid,username) VALUES(?,?)"
-        cur.execute(query,(userid,username))
-        db.commit()
-    except lite.Error as e:
-        print(e)
+    if not UserInDb(db,cur,userid):
+        try:
+            query = "INSERT INTO users(uid,username) VALUES(?,?)"
+            cur.execute(query,(userid,username))
+            db.commit()
+        except lite.Error as e:
+            print(e)
 
 def RegisterAdmin(db,cur,userid,gid):
     if not AdminInDb(db,cur,userid,gid):

@@ -15,20 +15,20 @@ def modecb(bot,update,args):
         username = update.message.reply_to_message.from_user.username
         userid = update.message.reply_to_message.from_user.id
     except AttributeError:
-        update.message.reply_text(text="Usage:\nquoting the user you want to change mode\n/mode +o|-o")
+        bot.sendMessage(gid,text="Usage:\nquoting the user you want to change mode\n/mode +o|-o")
         return
 
     RegisterUser(db,cur,userid,username)
     if args[0] == "+o":
         #promote_to_admin
         if not AdminInDb(db,cur,userid,gid):
-            update.message.reply_text(text = username+" promoted to op")
+            bot.sendMessage(gid,text = username+" promoted to op")
             RegisterAdmin(db,cur,userid,gid)
         else:
-            update.message.reply_text(text=username+" already Op")
+            bot.sendMessage(gid,text=username+" already Op")
     elif args[0] == "-o":
         if AdminInDb(db,cur,userid,gid):
-            update.message.reply_text(text=username+" removed from op")
+            bot.sendMessage(gid,text=username+" removed from op")
             RemoveAdmin(db,cur,userid,gid)
 
 def opcb(bot, update):
