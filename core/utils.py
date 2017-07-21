@@ -4,8 +4,5 @@ from telegram.bot import *
 
 def isAdmin(bot,uid,gid):
     role = bot.getChatMember(gid, uid)
-    if role.status == "administrator" or role.status == "creator":
-        return True
-    else:
-        return False
+    return (True if role.status in ["administrator", "creator"] else False)
 
