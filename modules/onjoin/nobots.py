@@ -10,16 +10,18 @@ def NoBots(bot,update):
     for user in new_members:
         username = user.username
         uid = user.id
-        if uid != bot.id:
-            if re.search("\w*bot$",username,re.IGNORECASE) != None:
-                db,cur = SetupSession()
-                if not BotInWhitelist(db,cur,gid,uid):
-                    update.message.reply_text(text="Bot not in whitelist")
-                    bot.kickChatMember(gid, uid)
-                    db.close()
-                else:
-                    update.message.reply_text(text="Bot in whitelist")
-                    db.close()
+        if uid == bot.id:
+            return
+        if re.search("\w*bot$",username,re.IGNORECASE) is None:
+            return
+        db,cur = SetupSession()
+        if not BotInWhitelist(db,cur,gid,uid):
+            update.message.reply_text(text="Bot not in whitelist")
+            bot.kickChatMember(gid, uid)
+            db.close()
+        else:
+            update.message.reply_text(text="Bot in whitelist")
+            db.close()
         
 
 class nobots:
