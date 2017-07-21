@@ -4,7 +4,7 @@ def genlink(bot,update):
     uid = update.message
     gid = update.message.chat_id
     if isAdmin(bot,uid,gid):
-        bot.sendMessage(gid,link)
+        update.message.reply_text(text=link)
 
 
 class link:
