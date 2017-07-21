@@ -11,9 +11,9 @@ def NoBots(bot,update):
         username = user.username
         uid = user.id
         if uid == bot.id:
-            return
+            continue
         if re.search("\w*bot$",username,re.IGNORECASE) is None:
-            return
+            continue
         db,cur = SetupSession()
         if not BotInWhitelist(db,cur,gid,uid):
             update.message.reply_text(text="Bot not in whitelist")
