@@ -1,7 +1,7 @@
 import telegram
 
 def pongcb(bot,update):
-    update.message.reply_text(text="pong")
+    bot.sendMessage(update.message.chat_id,text="pong")
 
 class pong:
     name = "ping"

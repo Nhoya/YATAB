@@ -8,7 +8,7 @@ def helpcb(bot,update):
     msg = msg+" ===== *CONTROLS* =====\n"
     for cont in config.onjoin:
         msg = msg+"`"+cont.name+"` - "+cont.desc+"\n"
-    update.message.reply_text(text=msg, parse_mode='MARKDOWN')
+    bot.sendMessage(update.message.chat_id,text=msg,parse_mode='MARKDOWN')
     
 
 class help:

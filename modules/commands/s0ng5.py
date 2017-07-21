@@ -9,7 +9,7 @@ songs = ["HqGRCOup974", "XRfsdPJKhUo", "shulFP-035k", "53OAddB7xqI", "vwTuQNEVIw
 def s0ngcb(bot,update):
     vid = random.choice(songs) #check config.py
     print(update.message.chat_id)
-    update.message.reply_text(text="https://www.youtube.com/watch?v="+vid)
+    bot.sendMessage(update.message.chat_id,text="https://www.youtube.com/watch?v="+vid)
 
 
 class s0ng:
