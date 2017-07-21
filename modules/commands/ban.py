@@ -9,12 +9,12 @@ def bancb(bot,update):
         return
     userid = update.message.reply_to_message.from_user.id
     if isAdmin(bot,userid,gid):
-        bot.sendMessage(gid,text="You can't kick an administrator")
+        update.message.reply_text(text="You can't kick an administrator")
     else:
         db,cur = SetupSession()
         if BanUser(db,cur,userid,gid):
             #bot.kickChatMember(gid,userid)
-            bot.sendMessage(gid,text="User wiped")
+            update.message.reply_text(text="User wiped")
             db.close()
       
 
@@ -31,7 +31,7 @@ def unbancb(bot,update):
         db,cur = SetupSession()
         if UnbanUser(db,cur,userid,gid):
             #bot.unbanChatMember(gid,userid)
-            bot.sendMessage(gid,text="Ban removed")
+            update.message.reply_text(text="Ban removed")
             db.close
 class ban:
     name = "ban"
